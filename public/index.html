@@ -1,33 +1,132 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CSS/HTML Workshop with Drivy</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Css/style.css">
+  
+    <title>CSS/HTML Workshop with Drivy</title><base>
   </head>
   <body>
+     <nav class="navbar navbar-inverse">
+        <div class="container">
+        <div class="navbar-header"> 
+    <a class="navbar-brand" href="index.php">Drivy</a></div>
+     
+          </div>
+         </nav>
+         <div class="container">
+         <div class="jumbotron">
+         <h1> Compute Form Of Drivy</h1>
+         </div>
+         </div>
+         <div class="container">
+         <div class="form-horizontal">
+         <fieldset>
+         <legend>Compute Form</legend>
     <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
+       <div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Model car : </label>  
+  <div class="col-md-4">
+      <input class="model form-control input-md" type="text" placeholder="Car model"/>
+      </div>
+      </div>
+           <div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Price by Day</label>  
+  <div class="col-md-4">
+      <input class="price-by-day model form-control input-md" type="number" placeholder="Price by day"/>
+      </div>
+      </div>
+           <div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Price By Km</label>  
+  <div class="col-md-4">
+      <input class="price-by-km model form-control input-md" type="number" placeholder="Price by km"/>
+      </div>
+      </div>
     </div>
     <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
+    <div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Rental Begin Date</label>  
+  <div class="col-md-4">
+      <input class="form-control input-md begin" type="date" placeholder="Rental begin date YYYY-MM-DD"/>
+      </div>
+      </div>
+      <div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Rental End Date</label>  
+  <div class="col-md-4">
+      <input class="form-control input-md end" type="date" placeholder="Rental end date"/>
+      </div>
+      </div>
+      <div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Distance in Km</label>  
+  <div class="col-md-4">
+      <input class="distance form-control input-md" type="number" placeholder="Distance in km"/>
+      </div>
+      </div>
+      <div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">Option Deductible</label>
+  <div class="col-md-4">
+  <div class="checkbox">
+    <label for="checkboxes-0">
       <input class="option" type="checkbox" placeholder="Deductible option"/>
+      </label>
+      </div>
+      </div>
     </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
+    <div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="compute" class="btn btn-success">Compute</button>
+    </div>
+    </div>
+    </div>
+    
+    </fieldset>
+    </div>
+    </div>
+    <br/>    <br/>
+    <div class="container">
+    <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Who</th>
+        <th>Type</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <div id="actors"></div>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+    
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
         <div class="actor">
-          <span>{{who}}</span>
-          <span>{{type}}</span>
-          <span>{{amount}}</span>
+          <td>{{who}}</td>
+          <td>{{type}}</td>
+          <td>{{amount}}</td>
         </div>
+
       {{/actors}}
     </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
     <script src="drivy.js"></script>
     <script src="index.js"></script>
+      <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+   
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav">
+            <li> <a href="https://github.com/EsilvGuillaume/suit-up-drivy">Source GitHub</a> </li>
+          </ul> 
+      </div>
+      </div>
+      </nav>
   </body>
 </html>
